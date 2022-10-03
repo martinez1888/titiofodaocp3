@@ -1,8 +1,4 @@
-#SECURITY GROUPS
-output "sg_pub_id" {
-  value = aws_security_group.sg_pub.id
-}
-
-output "sg_priv_id" {
-  value = aws_security_group.sg_priv.id
+#DB INSTANCE
+output "rds_endpoint" {
+  value = aws_db_instance.rds_db_notifier.endpoint
 }
