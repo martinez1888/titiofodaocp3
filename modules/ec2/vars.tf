@@ -34,7 +34,7 @@ variable "port" {
 
 }
 
-variable "vpc_id" { 
+variable "vpc10_id" { 
   type = string
 }
 
