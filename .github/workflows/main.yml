@@ -1,4 +1,4 @@
-name: Provisioning S3 Bucket and updating index.html
+name: CP03-FUNCIONA-PELO-AMOR-DE-DEUS
 
 on:
   push:
