@@ -1,26 +1,22 @@
-name: CP03-FUNCIONA-PELO-AMOR-DE-DEUS
+name: Terraform Apply
 
-on:
-  push:
-    branches:
-    - main
+on: [push]
 
 jobs:
-  deploy:
+  terraform_apply:
     runs-on: ubuntu-latest
     steps:
-
-    - name: Checkout repo
-      uses: actions/checkout@v1
+    - uses: actions/checkout@v1
 
     - name: Install Terraform
       env:
-            TERRAFORM_VERSION: "1.2.8"
+        TERRAFORM_VERSION: "1.2.8"
       run: |
         tf_version=$TERRAFORM_VERSION
         wget https://releases.hashicorp.com/terraform/"$tf_version"/terraform_"$tf_version"_linux_amd64.zip
         unzip terraform_"$tf_version"_linux_amd64.zip
         sudo mv terraform /usr/local/bin/
+        
     - name: Verify Terraform version
       run: terraform --version
 
