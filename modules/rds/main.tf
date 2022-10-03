@@ -9,7 +9,7 @@ resource "aws_db_subnet_group" "sn_group" {
 }
 #PARAMETER GROUP
 resource "aws_db_parameter_group" "p_group" {
-  name        = "p_group"
+  name        = "p-group"
   family      = "mysql8.0"
   description = "p_group"
 
