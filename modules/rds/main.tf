@@ -1,7 +1,7 @@
 #DB SUBNET GROUP
 resource "aws_db_subnet_group" "sn_group" {
   name       = "sn_group"
-  subnet_ids = [var.sn_priv_1a_id, var.sn_priv_1c_id]
+  subnet_ids = [var.sn_vpc10_priv_1a_id, var.sn_vpc10_priv_1c_id]
 
   tags = {
     Name = "sn_group"
