@@ -138,7 +138,7 @@ resource "aws_lb_target_group" "tg_app_notify" {
 
 #LOAD BALANCER LISTENER
 resource "aws_lb_listener" "listener_app_notify" {
-  load_balancer_arn = aws_lb.lb_app_notify.arn
+  load_balancer_arn = aws-lb.lb_app_notify.arn
   protocol          = var.protocol
   port              = var.port
 
