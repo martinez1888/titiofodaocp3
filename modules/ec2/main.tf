@@ -127,7 +127,7 @@ resource "aws_lb" "elb_ws" {
 #LOAD BALANCER TARGET GROUP
 resource "aws_lb_target_group" "tg_app_notify" {
   name     = "tg-app-notify"
-  vpc_id   = var.vpc_id
+  vpc_id   = var.vpc10_id
   protocol = var.protocol
   port     = var.port
 
