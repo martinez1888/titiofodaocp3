@@ -113,7 +113,7 @@ resource "aws_autoscaling_group" "asg_ws" {
 }
 
 #LOAD BALANCER
-resource "aws_lb" "elb_ws" {
+resource "aws_lb" "elb-ws" {
   name               = "elb_ws"
   load_balancer_type = "application"
   subnets            = [var.sn_vpc10_pub_1a_id, var.sn_vpc10_pub_1c_id]
