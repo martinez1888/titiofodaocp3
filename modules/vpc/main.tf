@@ -80,21 +80,21 @@ resource "aws_route_table" "rt_priv" {
 }
 #SUBNET ASSOCIATION
 resource "aws_route_table_association" "a" {
-  subnet_id      = aws_subnet.sn_pub_1a.id
+  subnet_id      = aws_subnet.sn_vpc10_pub_1a.id
   route_table_id = aws_route_table.rt_public.id
 }
 
 resource "aws_route_table_association" "b" {
-  subnet_id      = aws_subnet.sn_priv_1a.id
+  subnet_id      = aws_subnet.sn_vpc10_priv_1a.id
   route_table_id = aws_route_table.rt_priv.id
 }
 
 resource "aws_route_table_association" "c" {
-  subnet_id      = aws_subnet.sn_pub_1c.id
+  subnet_id      = aws_subnet.sn_vpc10_pub_1c.id
   route_table_id = aws_route_table.rt_public.id
 }
 
 resource "aws_route_table_association" "D" {
-  subnet_id      = aws_subnet.sn_priv_1c.id
+  subnet_id      = aws_subnet.sn_vpc10_priv_1c.id
   route_table_id = aws_route_table.rt_priv.id
 }
